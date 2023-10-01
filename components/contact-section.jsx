@@ -3,7 +3,11 @@ import Button from "./button";
 import CustomInput from "./CustomInput";
 
 const ContactSection = forwardRef(({}, homeRef) => {
-  const [formData, setFormData] = useState({ name: "", message: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   const handleFormData = (e) => {
     setFormData((currentData) => ({
       ...currentData,
@@ -27,7 +31,15 @@ const ContactSection = forwardRef(({}, homeRef) => {
                 type="text"
                 label={"NAME"}
                 value={formData.name}
-                placeholder="Eg. John Doe"
+                placeholder="Enter your name..."
+                onChange={handleFormData}
+              />
+              <CustomInput
+                name="email"
+                type="text"
+                label={"Email"}
+                value={formData.email}
+                placeholder="Enter your email..."
                 onChange={handleFormData}
               />
               <CustomInput
@@ -35,7 +47,7 @@ const ContactSection = forwardRef(({}, homeRef) => {
                 type="textarea"
                 label={"MESSAGE"}
                 value={formData.message}
-                placeholder="Eg. John Doe"
+                placeholder="Write your message..."
                 onChange={handleFormData}
               />
               <Button buttonText={"SEND EMAIL"} onClick={() => {}} />

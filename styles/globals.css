@@ -21,8 +21,7 @@
 section{
     height: 100%;
     width: 100%;
-    padding: 100px 40px;
-    border: 1px solid black;
+    padding: 100px 40px;;
     scroll-snap-align: center;
     
 }
