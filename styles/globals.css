@@ -1,0 +1,51 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.page{ 
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-snap-stop: always;
+    overscroll-behavior-y: contain;
+    scroll-behavior: smooth;
+}
+.page::-webkit-scrollbar{
+    display: none;
+}
+section{
+    height: 100%;
+    width: 100%;
+    padding: 100px 40px;
+    border: 1px solid black;
+    scroll-snap-align: center;
+    
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+}
+
+#custom-textarea::-webkit-scrollbar{
+    background-color: transparent;
+    width: 5px;
+}
+#custom-textarea::-webkit-scrollbar-button{
+    display: none;
+}
+#custom-textarea::-webkit-scrollbar-corner{
+    display: none;
+}
+#custom-textarea::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 100px;
+    opacity: 0.5;
+    resize: none;
+    overflow: auto;
+}
